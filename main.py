@@ -15,12 +15,12 @@ def main():
     # Inicializa a calculadora
     calculadora = Calculadora()
 
-    limpar_tela()
-
-    # Apresenta o cabeçalho da calculadora
-    print("=" * 40)
-    print(f"{'Calculadora Simples':^40}")
-    print("=" * 40, end="\n\n")
+    # Verifica se o script está sendo executado diretamente, se estiver, limpa a tela e imprime o cabeçalho da calculadora, caso contrário, apenas executa o script
+    if __name__ == "__main__":
+        limpar_tela()
+        print("=" * 40)
+        print(f"{'Calculadora Simples':^40}")
+        print("=" * 40, end="\n\n")
 
     # Solicita a operação e os dois números ao usuário
     operador = input("Escolha a operação (+, -, *, /): ")
